@@ -1,0 +1,24 @@
+---
+title: Evaluate linkage quality
+---
+
+## Precision and recall
+
+Precision asks how many accepted links are correct. Recall asks how many true links were recovered. Which matters more depends on the analytic goal.
+
+```{r}
+true_positive <- 92
+false_positive <- 8
+false_negative <- 15
+precision <- true_positive / (true_positive + false_positive)
+recall <- true_positive / (true_positive + false_negative)
+round(c(precision = precision, recall = recall), 3)
+```
+
+## Bias in downstream estimates
+
+False non-matches can remove events unevenly across subgroups. False matches can misclassify outcomes or inflate denominators. Report linkage quality with the analysis, not as a disconnected appendix.
+
+## Sensitivity analysis
+
+Vary thresholds, re-run key estimates, and describe how sensitive conclusions are to plausible linkage error.

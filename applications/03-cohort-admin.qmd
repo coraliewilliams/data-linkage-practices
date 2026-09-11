@@ -1,0 +1,23 @@
+---
+title: Cohort participants to administrative records
+---
+
+## Question
+
+How can a cohort be linked to administrative records when only partial identifiers are available for some participants?
+
+## Data
+
+Synthetic cohort and administrative files with realistic duplicates, nicknames, and varying completeness by collection wave.
+
+## Linkage strategy
+
+Start with deterministic passes for the strongest identifiers, then score residual candidates probabilistically.
+
+## Result
+
+The walkthrough demonstrates why partial-identifier linkage needs both transparent exclusions and sensitivity analysis.
+
+## Reporting
+
+Describe partial identifier coverage, residual unmatched participants, and any subgroup patterns in linkage success.

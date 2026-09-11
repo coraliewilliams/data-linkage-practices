@@ -1,0 +1,15 @@
+---
+title: Turn scores into decisions
+---
+
+## Thresholds
+
+After scoring candidate pairs, decide which scores mean accept, reject, or review. A single threshold is simple but often too blunt for operational work.
+
+## Clerical review
+
+A review band is useful when the cost of a false match is high and some ambiguous pairs can be inspected. The review process should be documented, reproducible, and ideally blinded to downstream outcomes.
+
+## One-to-one and many-to-many constraints
+
+Entity resolution rules matter. A death record may link to one person, but a household address may validly link to many people. Constraining all problems to one-to-one can create artificial errors.
