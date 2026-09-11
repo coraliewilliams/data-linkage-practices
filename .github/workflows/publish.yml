@@ -35,7 +35,7 @@ jobs:
           git config user.name "Quarto GHA Workflow Runner"
 
           git checkout --orphan gh-pages
-          git rm -rf .
+          find . -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
           touch .nojekyll
           git add .nojekyll
           git commit -m "Initialize gh-pages branch"
