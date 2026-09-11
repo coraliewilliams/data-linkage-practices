@@ -1,0 +1,18 @@
+---
+title: About
+---
+
+## Why this site exists
+
+Record linkage is often taught as either pure method or pure software. This project keeps both in view: short theory pages explain the decision points, and longer R scripts show how those decisions play out in reproducible workflows.
+
+## Scope
+
+Examples are written with public health and epidemiology in mind, but the same patterns apply to other linkage problems: cleaning noisy identifiers, reducing candidate pairs, comparing records consistently, and documenting uncertainty.
+
+## Design choices
+
+- Theory first, applications second.
+- Synthetic person-level health data where real public data would be inappropriate.
+- Real public datasets where organisation, place, or registry examples fit the task.
+- Frozen Quarto outputs so GitHub Pages deployment does not need R in CI.

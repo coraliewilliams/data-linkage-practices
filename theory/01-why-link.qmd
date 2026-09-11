@@ -1,0 +1,15 @@
+---
+title: Why link records?
+---
+
+## What linkage is
+
+Record linkage brings together records that refer to the same person, event, organisation, or place when there is no single perfect key. In epidemiology, this often means combining cohort, hospital, registry, and mortality data to answer a question that no one source can answer alone.
+
+## Deterministic and probabilistic linkage
+
+Deterministic linkage uses exact or rule-based agreement on selected fields. Probabilistic linkage allows disagreement and weighs evidence across multiple identifiers. Most real workflows mix the two: exact agreement where identifiers are strong, probabilistic scoring where they are not.
+
+## Where linkage sits in an analytic pipeline
+
+Linkage is upstream of analysis but downstream of data acquisition, governance, and cleaning. Errors introduced here carry forward into denominators, follow-up time, exposure histories, and outcome ascertainment.
