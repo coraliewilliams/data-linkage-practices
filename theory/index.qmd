@@ -1,0 +1,5 @@
+---
+title: Theory
+---
+
+Theory pages are short by design: one concept each, concrete headings, and only enough R to clarify a point. Read them in order if you are new to linkage, or use the sidebar to jump to the step you need.

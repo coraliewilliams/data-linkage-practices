@@ -1,0 +1,44 @@
+# History files
+.Rhistory
+.Rapp.history
+
+# Session data files
+.RData
+.RDataTmp
+.Ruserdata
+
+# User-specific files
+.Rproj.user/
+
+# R package build/check output
+*-Ex.R
+/*.tar.gz
+/*.Rcheck/
+
+# Quarto output and local caches
+_site/
+.quarto/
+*_cache/
+/cache/
+*.utf8.md
+*.knit.md
+
+# renv local library and staging
+renv/library/
+renv/staging/
+
+# Environment files
+.Renviron
+.httr-oauth
+
+# Data cache
+/data-raw/*
+!/data-raw/.gitignore
+
+# Docs/site artifacts not used here
+docs/
+rsconnect/
+po/*~
+
+/.quarto/
+**/*.quarto_ipynb

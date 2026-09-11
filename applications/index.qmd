@@ -1,0 +1,5 @@
+---
+title: Applications
+---
+
+Each application page states the question, the data, the linkage strategy, the result, and what a report would need to say. The longer implementation details live in the matching script under `R/`.

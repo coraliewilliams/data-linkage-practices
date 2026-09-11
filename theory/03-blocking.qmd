@@ -1,0 +1,25 @@
+---
+title: Block before you compare
+---
+
+## Why blocking is needed
+
+Comparing every record in file A to every record in file B is usually infeasible. Blocking reduces the candidate set by requiring coarse agreement on a few fields before detailed comparison.
+
+## Common strategies
+
+Use stable, fairly complete fields for blocks: year of birth, sex, postcode prefix, or a phonetic name key. Multi-pass blocking is often safer than a single narrow rule.
+
+## The cost of blocks that are too tight
+
+If a true match fails the block, it never reaches the scoring stage.
+
+```{r}
+people_a <- 1000
+people_b <- 1000
+full_pairs <- people_a * people_b
+blocked_pairs <- people_a * 8
+c(full_pairs = full_pairs, blocked_pairs = blocked_pairs)
+```
+
+A good block cuts the search space sharply without discarding plausible matches.

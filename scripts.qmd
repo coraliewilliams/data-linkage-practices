@@ -1,0 +1,30 @@
+---
+title: Scripts
+---
+
+## Standalone walkthroughs
+
+These scripts are meant to be read top to bottom in RStudio and can be run independently of the website once the project environment is restored.
+
+### Theory sequence
+
+1. `R/01-prepare-identifiers.R`
+2. `R/02-blocking-strategies.R`
+3. `R/03-comparison-patterns.R`
+4. `R/04-fellegi-sunter.R`
+5. `R/05-threshold-decisions.R`
+6. `R/06-evaluation-metrics.R`
+7. `R/07-reporting-template.R`
+
+### Application sequence
+
+1. `R/app-01-hospital-deaths.R`
+2. `R/app-02-immunisation-disease.R`
+3. `R/app-03-cohort-admin.R`
+4. `R/app-04-facility-names.R`
+5. `R/app-05-country-names.R`
+6. `R/app-06-deduplication.R`
+
+### Run everything
+
+`R/00-run-all.R` sources the scripts in order. Use it only after restoring the `renv` environment and checking any cached downloads in `data-raw/`.
