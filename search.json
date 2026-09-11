@@ -1,0 +1,796 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "Record linkage is often taught as either pure method or pure software. This project keeps both in view: short theory pages explain the decision points, and longer R scripts show how those decisions play out in reproducible workflows."
+  },
+  {
+    "objectID": "about.html#why-this-site-exists",
+    "href": "about.html#why-this-site-exists",
+    "title": "About",
+    "section": "",
+    "text": "Record linkage is often taught as either pure method or pure software. This project keeps both in view: short theory pages explain the decision points, and longer R scripts show how those decisions play out in reproducible workflows."
+  },
+  {
+    "objectID": "about.html#scope",
+    "href": "about.html#scope",
+    "title": "About",
+    "section": "Scope",
+    "text": "Scope\nExamples are written with public health and epidemiology in mind, but the same patterns apply to other linkage problems: cleaning noisy identifiers, reducing candidate pairs, comparing records consistently, and documenting uncertainty."
+  },
+  {
+    "objectID": "about.html#design-choices",
+    "href": "about.html#design-choices",
+    "title": "About",
+    "section": "Design choices",
+    "text": "Design choices\n\nTheory first, applications second.\nSynthetic person-level health data where real public data would be inappropriate.\nReal public datasets where organisation, place, or registry examples fit the task.\nFrozen Quarto outputs so GitHub Pages deployment does not need R in CI."
+  },
+  {
+    "objectID": "applications/04-facility-names.html",
+    "href": "applications/04-facility-names.html",
+    "title": "Match facility names across public lists",
+    "section": "",
+    "text": "How can two public facility lists be aligned when names, abbreviations, and address formats differ?",
+    "crumbs": [
+      "Applications",
+      "Match facility names across public lists"
+    ]
+  },
+  {
+    "objectID": "applications/04-facility-names.html#question",
+    "href": "applications/04-facility-names.html#question",
+    "title": "Match facility names across public lists",
+    "section": "",
+    "text": "How can two public facility lists be aligned when names, abbreviations, and address formats differ?",
+    "crumbs": [
+      "Applications",
+      "Match facility names across public lists"
+    ]
+  },
+  {
+    "objectID": "applications/04-facility-names.html#data",
+    "href": "applications/04-facility-names.html#data",
+    "title": "Match facility names across public lists",
+    "section": "Data",
+    "text": "Data\nTwo openly available CMS hospital files cached under data-raw/ and reused by R/app-04-facility-names.R.",
+    "crumbs": [
+      "Applications",
+      "Match facility names across public lists"
+    ]
+  },
+  {
+    "objectID": "applications/04-facility-names.html#linkage-strategy",
+    "href": "applications/04-facility-names.html#linkage-strategy",
+    "title": "Match facility names across public lists",
+    "section": "Linkage strategy",
+    "text": "Linkage strategy\nStandardise facility names and address fields, block on state, and use string distance plus postcode agreement for candidate scoring.",
+    "crumbs": [
+      "Applications",
+      "Match facility names across public lists"
+    ]
+  },
+  {
+    "objectID": "applications/04-facility-names.html#result",
+    "href": "applications/04-facility-names.html#result",
+    "title": "Match facility names across public lists",
+    "section": "Result",
+    "text": "Result\nThe example shows where deterministic exact-name matching breaks down on abbreviations and campus variants.",
+    "crumbs": [
+      "Applications",
+      "Match facility names across public lists"
+    ]
+  },
+  {
+    "objectID": "applications/04-facility-names.html#reporting",
+    "href": "applications/04-facility-names.html#reporting",
+    "title": "Match facility names across public lists",
+    "section": "Reporting",
+    "text": "Reporting\nList the source URLs, cache date, normalisation rules, and any unresolved many-to-one name collisions.",
+    "crumbs": [
+      "Applications",
+      "Match facility names across public lists"
+    ]
+  },
+  {
+    "objectID": "applications/03-cohort-admin.html",
+    "href": "applications/03-cohort-admin.html",
+    "title": "Cohort participants to administrative records",
+    "section": "",
+    "text": "How can a cohort be linked to administrative records when only partial identifiers are available for some participants?",
+    "crumbs": [
+      "Applications",
+      "Cohort participants to administrative records"
+    ]
+  },
+  {
+    "objectID": "applications/03-cohort-admin.html#question",
+    "href": "applications/03-cohort-admin.html#question",
+    "title": "Cohort participants to administrative records",
+    "section": "",
+    "text": "How can a cohort be linked to administrative records when only partial identifiers are available for some participants?",
+    "crumbs": [
+      "Applications",
+      "Cohort participants to administrative records"
+    ]
+  },
+  {
+    "objectID": "applications/03-cohort-admin.html#data",
+    "href": "applications/03-cohort-admin.html#data",
+    "title": "Cohort participants to administrative records",
+    "section": "Data",
+    "text": "Data\nSynthetic cohort and administrative files with realistic duplicates, nicknames, and varying completeness by collection wave.",
+    "crumbs": [
+      "Applications",
+      "Cohort participants to administrative records"
+    ]
+  },
+  {
+    "objectID": "applications/03-cohort-admin.html#linkage-strategy",
+    "href": "applications/03-cohort-admin.html#linkage-strategy",
+    "title": "Cohort participants to administrative records",
+    "section": "Linkage strategy",
+    "text": "Linkage strategy\nStart with deterministic passes for the strongest identifiers, then score residual candidates probabilistically.",
+    "crumbs": [
+      "Applications",
+      "Cohort participants to administrative records"
+    ]
+  },
+  {
+    "objectID": "applications/03-cohort-admin.html#result",
+    "href": "applications/03-cohort-admin.html#result",
+    "title": "Cohort participants to administrative records",
+    "section": "Result",
+    "text": "Result\nThe walkthrough demonstrates why partial-identifier linkage needs both transparent exclusions and sensitivity analysis.",
+    "crumbs": [
+      "Applications",
+      "Cohort participants to administrative records"
+    ]
+  },
+  {
+    "objectID": "applications/03-cohort-admin.html#reporting",
+    "href": "applications/03-cohort-admin.html#reporting",
+    "title": "Cohort participants to administrative records",
+    "section": "Reporting",
+    "text": "Reporting\nDescribe partial identifier coverage, residual unmatched participants, and any subgroup patterns in linkage success.",
+    "crumbs": [
+      "Applications",
+      "Cohort participants to administrative records"
+    ]
+  },
+  {
+    "objectID": "applications/02-immunisation-disease.html",
+    "href": "applications/02-immunisation-disease.html",
+    "title": "Immunisation register to notifiable disease records",
+    "section": "",
+    "text": "Can immunisation histories be linked to later disease notifications when identifiers are incomplete or out of date?",
+    "crumbs": [
+      "Applications",
+      "Immunisation register to notifiable disease records"
+    ]
+  },
+  {
+    "objectID": "applications/02-immunisation-disease.html#question",
+    "href": "applications/02-immunisation-disease.html#question",
+    "title": "Immunisation register to notifiable disease records",
+    "section": "",
+    "text": "Can immunisation histories be linked to later disease notifications when identifiers are incomplete or out of date?",
+    "crumbs": [
+      "Applications",
+      "Immunisation register to notifiable disease records"
+    ]
+  },
+  {
+    "objectID": "applications/02-immunisation-disease.html#data",
+    "href": "applications/02-immunisation-disease.html#data",
+    "title": "Immunisation register to notifiable disease records",
+    "section": "Data",
+    "text": "Data\nSynthetic register and notification extracts with missing address fields, changed surnames, and occasional date transpositions.",
+    "crumbs": [
+      "Applications",
+      "Immunisation register to notifiable disease records"
+    ]
+  },
+  {
+    "objectID": "applications/02-immunisation-disease.html#linkage-strategy",
+    "href": "applications/02-immunisation-disease.html#linkage-strategy",
+    "title": "Immunisation register to notifiable disease records",
+    "section": "Linkage strategy",
+    "text": "Linkage strategy\nUse probabilistic linkage with partial identifiers and compare the effect of stricter versus looser review thresholds.",
+    "crumbs": [
+      "Applications",
+      "Immunisation register to notifiable disease records"
+    ]
+  },
+  {
+    "objectID": "applications/02-immunisation-disease.html#result",
+    "href": "applications/02-immunisation-disease.html#result",
+    "title": "Immunisation register to notifiable disease records",
+    "section": "Result",
+    "text": "Result\nThe example highlights the trade-off between missed true links and over-linking in sparse identifier settings.",
+    "crumbs": [
+      "Applications",
+      "Immunisation register to notifiable disease records"
+    ]
+  },
+  {
+    "objectID": "applications/02-immunisation-disease.html#reporting",
+    "href": "applications/02-immunisation-disease.html#reporting",
+    "title": "Immunisation register to notifiable disease records",
+    "section": "Reporting",
+    "text": "Reporting\nReport which identifiers were absent, how they were handled, and how linkage uncertainty could affect vaccine effectiveness or surveillance estimates.",
+    "crumbs": [
+      "Applications",
+      "Immunisation register to notifiable disease records"
+    ]
+  },
+  {
+    "objectID": "scripts.html",
+    "href": "scripts.html",
+    "title": "Scripts",
+    "section": "",
+    "text": "These scripts are meant to be read top to bottom in RStudio and can be run independently of the website once the project environment is restored.\n\n\n\nR/01-prepare-identifiers.R\nR/02-blocking-strategies.R\nR/03-comparison-patterns.R\nR/04-fellegi-sunter.R\nR/05-threshold-decisions.R\nR/06-evaluation-metrics.R\nR/07-reporting-template.R\n\n\n\n\n\nR/app-01-hospital-deaths.R\nR/app-02-immunisation-disease.R\nR/app-03-cohort-admin.R\nR/app-04-facility-names.R\nR/app-05-country-names.R\nR/app-06-deduplication.R\n\n\n\n\nR/00-run-all.R sources the scripts in order. Use it only after restoring the renv environment and checking any cached downloads in data-raw/."
+  },
+  {
+    "objectID": "scripts.html#standalone-walkthroughs",
+    "href": "scripts.html#standalone-walkthroughs",
+    "title": "Scripts",
+    "section": "",
+    "text": "These scripts are meant to be read top to bottom in RStudio and can be run independently of the website once the project environment is restored.\n\n\n\nR/01-prepare-identifiers.R\nR/02-blocking-strategies.R\nR/03-comparison-patterns.R\nR/04-fellegi-sunter.R\nR/05-threshold-decisions.R\nR/06-evaluation-metrics.R\nR/07-reporting-template.R\n\n\n\n\n\nR/app-01-hospital-deaths.R\nR/app-02-immunisation-disease.R\nR/app-03-cohort-admin.R\nR/app-04-facility-names.R\nR/app-05-country-names.R\nR/app-06-deduplication.R\n\n\n\n\nR/00-run-all.R sources the scripts in order. Use it only after restoring the renv environment and checking any cached downloads in data-raw/."
+  },
+  {
+    "objectID": "theory/06-evaluation.html",
+    "href": "theory/06-evaluation.html",
+    "title": "Evaluate linkage quality",
+    "section": "",
+    "text": "Precision asks how many accepted links are correct. Recall asks how many true links were recovered. Which matters more depends on the analytic goal.\n\ntrue_positive &lt;- 92\nfalse_positive &lt;- 8\nfalse_negative &lt;- 15\nprecision &lt;- true_positive / (true_positive + false_positive)\nrecall &lt;- true_positive / (true_positive + false_negative)\nround(c(precision = precision, recall = recall), 3)\n\nprecision    recall \n     0.92      0.86",
+    "crumbs": [
+      "Theory",
+      "Evaluate linkage quality"
+    ]
+  },
+  {
+    "objectID": "theory/06-evaluation.html#precision-and-recall",
+    "href": "theory/06-evaluation.html#precision-and-recall",
+    "title": "Evaluate linkage quality",
+    "section": "",
+    "text": "Precision asks how many accepted links are correct. Recall asks how many true links were recovered. Which matters more depends on the analytic goal.\n\ntrue_positive &lt;- 92\nfalse_positive &lt;- 8\nfalse_negative &lt;- 15\nprecision &lt;- true_positive / (true_positive + false_positive)\nrecall &lt;- true_positive / (true_positive + false_negative)\nround(c(precision = precision, recall = recall), 3)\n\nprecision    recall \n     0.92      0.86",
+    "crumbs": [
+      "Theory",
+      "Evaluate linkage quality"
+    ]
+  },
+  {
+    "objectID": "theory/06-evaluation.html#bias-in-downstream-estimates",
+    "href": "theory/06-evaluation.html#bias-in-downstream-estimates",
+    "title": "Evaluate linkage quality",
+    "section": "Bias in downstream estimates",
+    "text": "Bias in downstream estimates\nFalse non-matches can remove events unevenly across subgroups. False matches can misclassify outcomes or inflate denominators. Report linkage quality with the analysis, not as a disconnected appendix.",
+    "crumbs": [
+      "Theory",
+      "Evaluate linkage quality"
+    ]
+  },
+  {
+    "objectID": "theory/06-evaluation.html#sensitivity-analysis",
+    "href": "theory/06-evaluation.html#sensitivity-analysis",
+    "title": "Evaluate linkage quality",
+    "section": "Sensitivity analysis",
+    "text": "Sensitivity analysis\nVary thresholds, re-run key estimates, and describe how sensitive conclusions are to plausible linkage error.",
+    "crumbs": [
+      "Theory",
+      "Evaluate linkage quality"
+    ]
+  },
+  {
+    "objectID": "theory/04-comparison.html",
+    "href": "theory/04-comparison.html",
+    "title": "Compare fields systematically",
+    "section": "",
+    "text": "Names and addresses usually need graded comparison rather than exact equality. String distances help identify near matches, while agreement patterns across several fields describe how much evidence points toward a true link.",
+    "crumbs": [
+      "Theory",
+      "Compare fields systematically"
+    ]
+  },
+  {
+    "objectID": "theory/04-comparison.html#string-distance-and-agreement-patterns",
+    "href": "theory/04-comparison.html#string-distance-and-agreement-patterns",
+    "title": "Compare fields systematically",
+    "section": "",
+    "text": "Names and addresses usually need graded comparison rather than exact equality. String distances help identify near matches, while agreement patterns across several fields describe how much evidence points toward a true link.",
+    "crumbs": [
+      "Theory",
+      "Compare fields systematically"
+    ]
+  },
+  {
+    "objectID": "theory/04-comparison.html#fellegi-sunter-logic",
+    "href": "theory/04-comparison.html#fellegi-sunter-logic",
+    "title": "Compare fields systematically",
+    "section": "Fellegi-Sunter logic",
+    "text": "Fellegi-Sunter logic\nFellegi-Sunter scoring contrasts the chance of observing an agreement among true matches (m) with the chance of observing it among non-matches (u). Rare fields with high agreement often carry more weight than common fields.",
+    "crumbs": [
+      "Theory",
+      "Compare fields systematically"
+    ]
+  },
+  {
+    "objectID": "theory/04-comparison.html#em-in-practice",
+    "href": "theory/04-comparison.html#em-in-practice",
+    "title": "Compare fields systematically",
+    "section": "EM in practice",
+    "text": "EM in practice\nExpectation-maximisation is often used to estimate m and u probabilities when labelled matches are unavailable. It does not remove the need for judgement; it just makes the weighting step more systematic.",
+    "crumbs": [
+      "Theory",
+      "Compare fields systematically"
+    ]
+  },
+  {
+    "objectID": "theory/01-why-link.html",
+    "href": "theory/01-why-link.html",
+    "title": "Why link records?",
+    "section": "",
+    "text": "Record linkage brings together records that refer to the same person, event, organisation, or place when there is no single perfect key. In epidemiology, this often means combining cohort, hospital, registry, and mortality data to answer a question that no one source can answer alone.",
+    "crumbs": [
+      "Theory",
+      "Why link records?"
+    ]
+  },
+  {
+    "objectID": "theory/01-why-link.html#what-linkage-is",
+    "href": "theory/01-why-link.html#what-linkage-is",
+    "title": "Why link records?",
+    "section": "",
+    "text": "Record linkage brings together records that refer to the same person, event, organisation, or place when there is no single perfect key. In epidemiology, this often means combining cohort, hospital, registry, and mortality data to answer a question that no one source can answer alone.",
+    "crumbs": [
+      "Theory",
+      "Why link records?"
+    ]
+  },
+  {
+    "objectID": "theory/01-why-link.html#deterministic-and-probabilistic-linkage",
+    "href": "theory/01-why-link.html#deterministic-and-probabilistic-linkage",
+    "title": "Why link records?",
+    "section": "Deterministic and probabilistic linkage",
+    "text": "Deterministic and probabilistic linkage\nDeterministic linkage uses exact or rule-based agreement on selected fields. Probabilistic linkage allows disagreement and weighs evidence across multiple identifiers. Most real workflows mix the two: exact agreement where identifiers are strong, probabilistic scoring where they are not.",
+    "crumbs": [
+      "Theory",
+      "Why link records?"
+    ]
+  },
+  {
+    "objectID": "theory/01-why-link.html#where-linkage-sits-in-an-analytic-pipeline",
+    "href": "theory/01-why-link.html#where-linkage-sits-in-an-analytic-pipeline",
+    "title": "Why link records?",
+    "section": "Where linkage sits in an analytic pipeline",
+    "text": "Where linkage sits in an analytic pipeline\nLinkage is upstream of analysis but downstream of data acquisition, governance, and cleaning. Errors introduced here carry forward into denominators, follow-up time, exposure histories, and outcome ascertainment.",
+    "crumbs": [
+      "Theory",
+      "Why link records?"
+    ]
+  },
+  {
+    "objectID": "theory/index.html",
+    "href": "theory/index.html",
+    "title": "Theory",
+    "section": "",
+    "text": "Theory pages are short by design: one concept each, concrete headings, and only enough R to clarify a point. Read them in order if you are new to linkage, or use the sidebar to jump to the step you need.",
+    "crumbs": [
+      "Theory"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Home",
+    "section": "",
+    "text": "Practical guidance and reproducible R code for cleaning, blocking, matching, and evaluating linked data."
+  },
+  {
+    "objectID": "index.html#who-this-is-for",
+    "href": "index.html#who-this-is-for",
+    "title": "Home",
+    "section": "Who this is for",
+    "text": "Who this is for\nThis site is for analysts, researchers, and data stewards who need a practical linkage workflow in R: clear preprocessing, transparent matching rules, and reporting that is good enough for audit, reproducibility, and epidemiologic interpretation.\n\n\n\n\n\n\nNoteHow to cite\n\n\n\nUse the repository citation metadata in CITATION.cff. Until final author details are confirmed, the placeholder ORCID is 0000-0000-0000-0000."
+  },
+  {
+    "objectID": "checklist.html",
+    "href": "checklist.html",
+    "title": "Checklist",
+    "section": "",
+    "text": "Stage\nQuestion\nWhy it matters\nRead next\n\n\n\n\nPre-linkage\nHave identifiers been standardised and profiled for missingness?\nDirty identifiers dominate false non-matches.\nIdentifiers\n\n\nPre-linkage\nIs the linkage question clear about units, time, and expected multiplicity?\nMatching people, events, and organisations leads to different rules.\nWhy link?\n\n\nLinkage\nAre blocking rules wide enough to keep plausible matches?\nOver-tight blocks can remove true matches before scoring.\nBlocking\n\n\nLinkage\nAre comparison fields weighted in line with their error structure?\nRare, stable identifiers should usually count more.\nComparison\n\n\nLinkage\nAre decision thresholds and clerical review rules explicit?\nHidden judgement makes results hard to audit.\nDecisions\n\n\nPost-linkage\nHave precision, recall, or proxy diagnostics been reported?\nLinkage quality affects downstream bias.\nEvaluation\n\n\nReporting\nHave governance, privacy, and reporting standards been documented?\nReviewers need to know how linkage was done and constrained.\nReporting"
+  },
+  {
+    "objectID": "checklist.html#data-linkage-checklist",
+    "href": "checklist.html#data-linkage-checklist",
+    "title": "Checklist",
+    "section": "",
+    "text": "Stage\nQuestion\nWhy it matters\nRead next\n\n\n\n\nPre-linkage\nHave identifiers been standardised and profiled for missingness?\nDirty identifiers dominate false non-matches.\nIdentifiers\n\n\nPre-linkage\nIs the linkage question clear about units, time, and expected multiplicity?\nMatching people, events, and organisations leads to different rules.\nWhy link?\n\n\nLinkage\nAre blocking rules wide enough to keep plausible matches?\nOver-tight blocks can remove true matches before scoring.\nBlocking\n\n\nLinkage\nAre comparison fields weighted in line with their error structure?\nRare, stable identifiers should usually count more.\nComparison\n\n\nLinkage\nAre decision thresholds and clerical review rules explicit?\nHidden judgement makes results hard to audit.\nDecisions\n\n\nPost-linkage\nHave precision, recall, or proxy diagnostics been reported?\nLinkage quality affects downstream bias.\nEvaluation\n\n\nReporting\nHave governance, privacy, and reporting standards been documented?\nReviewers need to know how linkage was done and constrained.\nReporting"
+  },
+  {
+    "objectID": "theory/07-reporting.html",
+    "href": "theory/07-reporting.html",
+    "title": "Report what you did",
+    "section": "",
+    "text": "Use GUILD and RECORD guidance to describe data sources, identifiers, blocking, comparison, decision rules, quality checks, and any clerical review.",
+    "crumbs": [
+      "Theory",
+      "Report what you did"
+    ]
+  },
+  {
+    "objectID": "theory/07-reporting.html#reporting-standards",
+    "href": "theory/07-reporting.html#reporting-standards",
+    "title": "Report what you did",
+    "section": "",
+    "text": "Use GUILD and RECORD guidance to describe data sources, identifiers, blocking, comparison, decision rules, quality checks, and any clerical review.",
+    "crumbs": [
+      "Theory",
+      "Report what you did"
+    ]
+  },
+  {
+    "objectID": "theory/07-reporting.html#what-to-document",
+    "href": "theory/07-reporting.html#what-to-document",
+    "title": "Report what you did",
+    "section": "What to document",
+    "text": "What to document\n\ndata custodians and legal basis\nsource population and date coverage\nidentifiers used, transformed, or excluded\nblocking passes and comparison fields\nthresholds, review rules, and final match counts\nhow linkage error was assessed and discussed\n\n\n\n\n\n\n\nNoteReporting note\n\n\n\nA reviewer should be able to understand the linkage design, its limits, and its likely effect on estimates without reverse-engineering code.",
+    "crumbs": [
+      "Theory",
+      "Report what you did"
+    ]
+  },
+  {
+    "objectID": "theory/07-reporting.html#privacy-and-governance",
+    "href": "theory/07-reporting.html#privacy-and-governance",
+    "title": "Report what you did",
+    "section": "Privacy and governance",
+    "text": "Privacy and governance\nLinkage design should respect the separation principle wherever possible. Privacy-preserving linkage methods can reduce direct exposure to identifiers, but they still need clear evaluation and governance.",
+    "crumbs": [
+      "Theory",
+      "Report what you did"
+    ]
+  },
+  {
+    "objectID": "theory/05-decisions.html",
+    "href": "theory/05-decisions.html",
+    "title": "Turn scores into decisions",
+    "section": "",
+    "text": "After scoring candidate pairs, decide which scores mean accept, reject, or review. A single threshold is simple but often too blunt for operational work.",
+    "crumbs": [
+      "Theory",
+      "Turn scores into decisions"
+    ]
+  },
+  {
+    "objectID": "theory/05-decisions.html#thresholds",
+    "href": "theory/05-decisions.html#thresholds",
+    "title": "Turn scores into decisions",
+    "section": "",
+    "text": "After scoring candidate pairs, decide which scores mean accept, reject, or review. A single threshold is simple but often too blunt for operational work.",
+    "crumbs": [
+      "Theory",
+      "Turn scores into decisions"
+    ]
+  },
+  {
+    "objectID": "theory/05-decisions.html#clerical-review",
+    "href": "theory/05-decisions.html#clerical-review",
+    "title": "Turn scores into decisions",
+    "section": "Clerical review",
+    "text": "Clerical review\nA review band is useful when the cost of a false match is high and some ambiguous pairs can be inspected. The review process should be documented, reproducible, and ideally blinded to downstream outcomes.",
+    "crumbs": [
+      "Theory",
+      "Turn scores into decisions"
+    ]
+  },
+  {
+    "objectID": "theory/05-decisions.html#one-to-one-and-many-to-many-constraints",
+    "href": "theory/05-decisions.html#one-to-one-and-many-to-many-constraints",
+    "title": "Turn scores into decisions",
+    "section": "One-to-one and many-to-many constraints",
+    "text": "One-to-one and many-to-many constraints\nEntity resolution rules matter. A death record may link to one person, but a household address may validly link to many people. Constraining all problems to one-to-one can create artificial errors.",
+    "crumbs": [
+      "Theory",
+      "Turn scores into decisions"
+    ]
+  },
+  {
+    "objectID": "theory/02-identifiers.html",
+    "href": "theory/02-identifiers.html",
+    "title": "Prepare identifiers well",
+    "section": "",
+    "text": "Common linkage fields include names, dates of birth, sex, addresses, postcodes, and administrative IDs. Each behaves differently: names vary in spelling, dates transpose easily, and addresses often change over time.",
+    "crumbs": [
+      "Theory",
+      "Prepare identifiers well"
+    ]
+  },
+  {
+    "objectID": "theory/02-identifiers.html#core-identifier-fields",
+    "href": "theory/02-identifiers.html#core-identifier-fields",
+    "title": "Prepare identifiers well",
+    "section": "",
+    "text": "Common linkage fields include names, dates of birth, sex, addresses, postcodes, and administrative IDs. Each behaves differently: names vary in spelling, dates transpose easily, and addresses often change over time.",
+    "crumbs": [
+      "Theory",
+      "Prepare identifiers well"
+    ]
+  },
+  {
+    "objectID": "theory/02-identifiers.html#standardisation-steps",
+    "href": "theory/02-identifiers.html#standardisation-steps",
+    "title": "Prepare identifiers well",
+    "section": "Standardisation steps",
+    "text": "Standardisation steps\n\nnormalise case and whitespace\nstrip punctuation that is not informative\nsplit compound fields consistently\nencode missingness explicitly rather than silently dropping records\npreserve raw values for audit and reruns\n\n\n\n\n\n\n\nWarningPitfall\n\n\n\nIf you overwrite raw identifiers during cleaning, you lose the ability to inspect disagreement patterns later.",
+    "crumbs": [
+      "Theory",
+      "Prepare identifiers well"
+    ]
+  },
+  {
+    "objectID": "theory/02-identifiers.html#missingness-and-encoding",
+    "href": "theory/02-identifiers.html#missingness-and-encoding",
+    "title": "Prepare identifiers well",
+    "section": "Missingness and encoding",
+    "text": "Missingness and encoding\nMissingness is part of linkage information. A blank date of birth is different from an impossible date, and both are different again from a parse failure caused by encoding.",
+    "crumbs": [
+      "Theory",
+      "Prepare identifiers well"
+    ]
+  },
+  {
+    "objectID": "theory/03-blocking.html",
+    "href": "theory/03-blocking.html",
+    "title": "Block before you compare",
+    "section": "",
+    "text": "Comparing every record in file A to every record in file B is usually infeasible. Blocking reduces the candidate set by requiring coarse agreement on a few fields before detailed comparison.",
+    "crumbs": [
+      "Theory",
+      "Block before you compare"
+    ]
+  },
+  {
+    "objectID": "theory/03-blocking.html#why-blocking-is-needed",
+    "href": "theory/03-blocking.html#why-blocking-is-needed",
+    "title": "Block before you compare",
+    "section": "",
+    "text": "Comparing every record in file A to every record in file B is usually infeasible. Blocking reduces the candidate set by requiring coarse agreement on a few fields before detailed comparison.",
+    "crumbs": [
+      "Theory",
+      "Block before you compare"
+    ]
+  },
+  {
+    "objectID": "theory/03-blocking.html#common-strategies",
+    "href": "theory/03-blocking.html#common-strategies",
+    "title": "Block before you compare",
+    "section": "Common strategies",
+    "text": "Common strategies\nUse stable, fairly complete fields for blocks: year of birth, sex, postcode prefix, or a phonetic name key. Multi-pass blocking is often safer than a single narrow rule.",
+    "crumbs": [
+      "Theory",
+      "Block before you compare"
+    ]
+  },
+  {
+    "objectID": "theory/03-blocking.html#the-cost-of-blocks-that-are-too-tight",
+    "href": "theory/03-blocking.html#the-cost-of-blocks-that-are-too-tight",
+    "title": "Block before you compare",
+    "section": "The cost of blocks that are too tight",
+    "text": "The cost of blocks that are too tight\nIf a true match fails the block, it never reaches the scoring stage.\n\npeople_a &lt;- 1000\npeople_b &lt;- 1000\nfull_pairs &lt;- people_a * people_b\nblocked_pairs &lt;- people_a * 8\nc(full_pairs = full_pairs, blocked_pairs = blocked_pairs)\n\n   full_pairs blocked_pairs \n        1e+06         8e+03 \n\n\nA good block cuts the search space sharply without discarding plausible matches.",
+    "crumbs": [
+      "Theory",
+      "Block before you compare"
+    ]
+  },
+  {
+    "objectID": "applications/index.html",
+    "href": "applications/index.html",
+    "title": "Applications",
+    "section": "",
+    "text": "Each application page states the question, the data, the linkage strategy, the result, and what a report would need to say. The longer implementation details live in the matching script under R/.",
+    "crumbs": [
+      "Applications"
+    ]
+  },
+  {
+    "objectID": "applications/01-hospital-deaths.html",
+    "href": "applications/01-hospital-deaths.html",
+    "title": "Hospital admissions to death registrations",
+    "section": "",
+    "text": "Which hospital admissions can be linked to a later death registration so follow-up and mortality outcomes are complete?",
+    "crumbs": [
+      "Applications",
+      "Hospital admissions to death registrations"
+    ]
+  },
+  {
+    "objectID": "applications/01-hospital-deaths.html#question",
+    "href": "applications/01-hospital-deaths.html#question",
+    "title": "Hospital admissions to death registrations",
+    "section": "",
+    "text": "Which hospital admissions can be linked to a later death registration so follow-up and mortality outcomes are complete?",
+    "crumbs": [
+      "Applications",
+      "Hospital admissions to death registrations"
+    ]
+  },
+  {
+    "objectID": "applications/01-hospital-deaths.html#data",
+    "href": "applications/01-hospital-deaths.html#data",
+    "title": "Hospital admissions to death registrations",
+    "section": "Data",
+    "text": "Data\nSynthetic admissions and death records modelled on a state linkage-unit workflow. Person-level fields are generated in-script because an equivalent public person dataset is not appropriate.",
+    "crumbs": [
+      "Applications",
+      "Hospital admissions to death registrations"
+    ]
+  },
+  {
+    "objectID": "applications/01-hospital-deaths.html#linkage-strategy",
+    "href": "applications/01-hospital-deaths.html#linkage-strategy",
+    "title": "Hospital admissions to death registrations",
+    "section": "Linkage strategy",
+    "text": "Linkage strategy\nUse broad blocking on year of birth and sex, compare names and dates with tolerated errors, then apply one-to-one resolution with manual review for the middle score band.",
+    "crumbs": [
+      "Applications",
+      "Hospital admissions to death registrations"
+    ]
+  },
+  {
+    "objectID": "applications/01-hospital-deaths.html#result",
+    "href": "applications/01-hospital-deaths.html#result",
+    "title": "Hospital admissions to death registrations",
+    "section": "Result",
+    "text": "Result\nThe walkthrough shows how small identifier errors propagate into missed links if blocking is too tight.",
+    "crumbs": [
+      "Applications",
+      "Hospital admissions to death registrations"
+    ]
+  },
+  {
+    "objectID": "applications/01-hospital-deaths.html#reporting",
+    "href": "applications/01-hospital-deaths.html#reporting",
+    "title": "Hospital admissions to death registrations",
+    "section": "Reporting",
+    "text": "Reporting\nState that the records are synthetic, describe the generator, and report the blocking, comparison, threshold, and one-to-one resolution rules used in R/app-01-hospital-deaths.R.",
+    "crumbs": [
+      "Applications",
+      "Hospital admissions to death registrations"
+    ]
+  },
+  {
+    "objectID": "applications/05-country-names.html",
+    "href": "applications/05-country-names.html",
+    "title": "Align country names across international datasets",
+    "section": "",
+    "text": "How can country and region names be reconciled across international health and development datasets?",
+    "crumbs": [
+      "Applications",
+      "Align country names across international datasets"
+    ]
+  },
+  {
+    "objectID": "applications/05-country-names.html#question",
+    "href": "applications/05-country-names.html#question",
+    "title": "Align country names across international datasets",
+    "section": "",
+    "text": "How can country and region names be reconciled across international health and development datasets?",
+    "crumbs": [
+      "Applications",
+      "Align country names across international datasets"
+    ]
+  },
+  {
+    "objectID": "applications/05-country-names.html#data",
+    "href": "applications/05-country-names.html#data",
+    "title": "Align country names across international datasets",
+    "section": "Data",
+    "text": "Data\nWorld Bank country metadata and WHO country dimension values loaded from stable public APIs and cached in data-raw/.",
+    "crumbs": [
+      "Applications",
+      "Align country names across international datasets"
+    ]
+  },
+  {
+    "objectID": "applications/05-country-names.html#linkage-strategy",
+    "href": "applications/05-country-names.html#linkage-strategy",
+    "title": "Align country names across international datasets",
+    "section": "Linkage strategy",
+    "text": "Linkage strategy\nUse exact ISO codes where possible, then resolve residual name variants with string distance and a small adjudication table.",
+    "crumbs": [
+      "Applications",
+      "Align country names across international datasets"
+    ]
+  },
+  {
+    "objectID": "applications/05-country-names.html#result",
+    "href": "applications/05-country-names.html#result",
+    "title": "Align country names across international datasets",
+    "section": "Result",
+    "text": "Result\nThe walkthrough surfaces common issues such as historical names, territories, and punctuation differences.",
+    "crumbs": [
+      "Applications",
+      "Align country names across international datasets"
+    ]
+  },
+  {
+    "objectID": "applications/05-country-names.html#reporting",
+    "href": "applications/05-country-names.html#reporting",
+    "title": "Align country names across international datasets",
+    "section": "Reporting",
+    "text": "Reporting\nState how unmatched territories and aggregate regions were handled, because those choices directly affect denominator comparability.",
+    "crumbs": [
+      "Applications",
+      "Align country names across international datasets"
+    ]
+  },
+  {
+    "objectID": "applications/06-deduplication.html",
+    "href": "applications/06-deduplication.html",
+    "title": "Deduplicate a public bibliographic export",
+    "section": "",
+    "text": "How can duplicate records be found in a public bibliographic export when titles and source metadata vary slightly?",
+    "crumbs": [
+      "Applications",
+      "Deduplicate a public bibliographic export"
+    ]
+  },
+  {
+    "objectID": "applications/06-deduplication.html#question",
+    "href": "applications/06-deduplication.html#question",
+    "title": "Deduplicate a public bibliographic export",
+    "section": "",
+    "text": "How can duplicate records be found in a public bibliographic export when titles and source metadata vary slightly?",
+    "crumbs": [
+      "Applications",
+      "Deduplicate a public bibliographic export"
+    ]
+  },
+  {
+    "objectID": "applications/06-deduplication.html#data",
+    "href": "applications/06-deduplication.html#data",
+    "title": "Deduplicate a public bibliographic export",
+    "section": "Data",
+    "text": "Data\nA small OpenAlex works export cached under data-raw/ and processed in R/app-06-deduplication.R.",
+    "crumbs": [
+      "Applications",
+      "Deduplicate a public bibliographic export"
+    ]
+  },
+  {
+    "objectID": "applications/06-deduplication.html#linkage-strategy",
+    "href": "applications/06-deduplication.html#linkage-strategy",
+    "title": "Deduplicate a public bibliographic export",
+    "section": "Linkage strategy",
+    "text": "Linkage strategy\nTreat the task as deduplication: block on publication year, compare titles and sources, and inspect high-score duplicate clusters.",
+    "crumbs": [
+      "Applications",
+      "Deduplicate a public bibliographic export"
+    ]
+  },
+  {
+    "objectID": "applications/06-deduplication.html#result",
+    "href": "applications/06-deduplication.html#result",
+    "title": "Deduplicate a public bibliographic export",
+    "section": "Result",
+    "text": "Result\nThe example shows how a deduplication workflow differs from linking two already distinct files.",
+    "crumbs": [
+      "Applications",
+      "Deduplicate a public bibliographic export"
+    ]
+  },
+  {
+    "objectID": "applications/06-deduplication.html#reporting",
+    "href": "applications/06-deduplication.html#reporting",
+    "title": "Deduplicate a public bibliographic export",
+    "section": "Reporting",
+    "text": "Reporting\nDocument the search query, download date, duplicate rules, and how near-duplicate titles were adjudicated.",
+    "crumbs": [
+      "Applications",
+      "Deduplicate a public bibliographic export"
+    ]
+  }
+]
